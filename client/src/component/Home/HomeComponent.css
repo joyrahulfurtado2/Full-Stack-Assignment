@@ -1,0 +1,62 @@
+.react-quill-cs{
+    
+    margin-top: 2%;
+    margin-bottom: 1%;
+    border-radius: 10px !important;
+}
+.sidewrapper-left{
+    width: 20%;
+}
+.sidewrapper-right{
+    width: 20%;
+}
+.sidewrapper-middle{
+    width: 60%;
+    padding: 0% 2%;
+}
+.home-container{
+    display: flex;
+}
+.pst-btn{
+    /* float: right; */
+    margin-bottom: 2%;
+    /* margin-left: 1% */
+}
+.sidewrapper-middle-sub{
+    margin-bottom: 1%;
+}
+.bg-color-black{
+    background-color: black ;
+    color: white;
+    border-color: black !important;
+}
+.btn-section-cs{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-sub-cs{
+    margin-right: 3%;
+}
+.btn-section-cs-sub{
+    display: flex;
+    justify-content: space-between;
+}
+.card-custom{
+    width: 100%;
+    padding: 1%;
+    border-color: black 0.25;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+.pst-btn:hover{
+    background-color:grey;
+}
+
+.show-content-cs{
+    margin-bottom: 1%;
+    text-align: justify;
+
+}
+.card-text{
+    text-align: justify;
+}
