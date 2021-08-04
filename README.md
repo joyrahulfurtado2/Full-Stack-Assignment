@@ -9,3 +9,6 @@ Future Enhancement:
 •	Now posts are loaded Infinitely which can Paginated.
 •	Side wrapper can be implemented based on daily trends or sections can be implemented.
 •	User accounts can be created, which helps in fetching click through impressions and likes.
+
+Heroku URL:
+https://joyfullstackassignment.herokuapp.com/
