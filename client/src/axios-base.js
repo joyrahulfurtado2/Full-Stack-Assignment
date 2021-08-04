@@ -6,7 +6,7 @@ const PORT = "http://localhost:"+process.env.CUSTOM_PORT+"/api" || "http://local
 var _baseUrl = "http://localhost:8080/api";
 
 const instance = axios.create({
-    baseURL: _baseUrl,
+    baseURL: PORT,
     httpsAgent: new https.Agent({ rejectUnauthorized: false})
 })
 

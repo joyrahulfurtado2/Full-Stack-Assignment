@@ -5,8 +5,8 @@ const cors= require('cors');
 const path = require('path');
 
 const app = express();
-// const PORT = process.env.CUSTOM_PORT || 8080;
-const PORT =  8080;
+const PORT = process.env.CUSTOM_PORT || 8080;
+// const PORT =  8080;
 
 
 MONGODB_URI ='mongodb+srv://joy_furtado:joy1234@cluster0.qvhwr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
