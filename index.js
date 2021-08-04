@@ -5,12 +5,12 @@ const cors= require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.CUSTOM_PORT || 8080;
 
 MONGODB_URI ='mongodb+srv://joy_furtado:joy1234@cluster0.qvhwr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const route = require("./route/route");
 
-mongoose.connect(process.env.CONFIGLY_API_KEY || MONGODB_URI, {
+mongoose.connect(process.env.MONGO_URI || MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -20,7 +20,7 @@ mongoose.connect(process.env.CONFIGLY_API_KEY || MONGODB_URI, {
 // });
 
 mongoose.connection.on('connected', ()=>{
-    console.log('MongoDb Connected at port 27017');
+    console.log('MongoDb Connected ',process.env.MONGO_URI);
 });
 
 mongoose.connection.on('error', (err)=>{
@@ -42,7 +42,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 if(process.env.NODE_ENV=='production'){
-    app.use(express.static('client/build'));
+    // app.use('/',(req,res)=>{
+    //     res.sendFile(path.resolve(__dirname,'client','build','index.html'));
+    // })
+    app.use('/',express.static('client/build'));
 }
 
 app.use('/api', route);
