@@ -1,7 +1,9 @@
 import axios from 'axios';
 import https from 'https';
+const PORT = process.env.PORT || 8080;
 
-var _baseUrl = "http://localhost:4000/api";
+
+var _baseUrl = `http://localhost:`+PORT+`/api`;
 
 const instance = axios.create({
     baseURL: _baseUrl,
